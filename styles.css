@@ -12,10 +12,11 @@
   --text-color4: #a4a4a4;
 
   --bg-body: #222222;
-  --bg-header: #ECE8D9;
-  --bg2: #333333;
+  --bg-header: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);;
+  --bg-section: background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
+  background-blend-mode: multiply;
 
-  --cor-span1: #DA1212;
+  --cor-span1: #F79327;
   --cor-span2: #0bbe56;
 
   --blur: 1.54px;
@@ -35,6 +36,7 @@
 
 html{
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body{
@@ -47,17 +49,16 @@ body{
 #header{
   display: flex;
   justify-content: space-between;
-  background-color: var(--bg-header);
-
+  background-image: var(--bg-header);
   width: 100%;
-  height: 8rem;
+  height: 6rem;
 
 }
 
 .logo{
   display: flex;
   justify-content: center;
-  height: 8rem;
+  height: 6rem;
   width: 50%;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 1.2rem;
@@ -71,7 +72,7 @@ body{
   gap: .5rem;
   text-transform: uppercase;
   width: 90%;
-  height: 8rem;
+  height: 6rem;
 }
 
 .logo span{
@@ -93,7 +94,7 @@ body{
   align-items: center;
   gap: 2rem;
   width: 80%;
-  height: 8rem;
+  height: 6rem;
 }
 
 .menus{
@@ -124,29 +125,31 @@ body{
   color: var(--text-color2);
 }
 
-/* -------- SECTION HOME -------- */
+/* -------- SECTION - HOME -------- */
 
 .section{
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 2rem;
-  border: 1px solid white;
+  height: 65rem;
+  padding: 1rem;
+  background-image:var(--bg-section);
 }
 
 .home{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 70%;
-  border: .2rem solid white;
+  display: flex;
+  width: 80%;
+  height: 90%;
 }
+
 
 .description{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  width: 50%;
   row-gap: 4rem;
   padding: 2rem;
   font-family: var(--font-family);
@@ -155,34 +158,53 @@ body{
 
 .home span{
   font-size: 2.5rem;
+  font-weight: 600;
   color: var(--cor-span1);
 }
 
 .home h2{
   font-size: 5rem;
+  font-weight: 400;
 }
 
 .illustration{
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  align-items: center;
+  width: 50%;
 }
+
+.illustration img{
+  width: 80%;
+}
+
+/* --------- BUTTONS ---------- */
 
 .buttons{
   display: flex;
-  width: 100%;
-  gap: 2rem;
+  margin-top: 5rem;
+  gap: 6rem;
+  width: 68%;
 }
 
 .buttons a{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  line-height: 4rem;
   border: .1rem solid white;
   color: var(--text-color2);
-  padding: .2rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
   width: 10rem;
   height: 4rem;
-  border-radius: 2rem;
+  border-radius: .2rem;
 }
+
+.btnlinkedin:hover{
+  background-color: #0e76a8;
+}
+
+.btngithub:hover{
+  background-color: #171515 ;
+}
+
 
