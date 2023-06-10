@@ -1,0 +1,74 @@
+/* ------------- RESPONSIVE DEL MENU (MOBILE) --------------- */
+@media (max-width: 550px){
+    .open__menu,
+    .close__menu{
+      display: block;
+      border: 0;
+      background: none;
+      font-size: 3rem;
+      color: var(--text-color2);
+      cursor: pointer;
+    }
+  
+    .nav{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      opacity: 0;
+      visibility: hidden;
+  
+      gap: 10rem;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 50%;
+      bottom: 0;
+      background-color: var(--bg-body);
+      padding: 2rem;
+      box-shadow: 0 0 0 100vmax rgba( 0, 0, 0, .5);
+      transition: 500ms;
+    }
+  
+    .visible{
+      opacity: 1;
+      visibility: visible;
+      transition: 500ms;
+    }
+  
+    .nav-list{
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .nav__item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 4rem;
+    }
+
+    .nav__link{
+        position: relative;
+        letter-spacing: 1px;
+        font-size: 2rem;
+        color: var(--text-color2);
+      }
+      
+      .nav__link::after{
+        content: "";
+        position: absolute;
+        background-color: var(--cor-span2);
+        height: .3rem;
+        width: 0;
+        left: 0;
+        bottom: -25%;
+        transition: 300ms;
+      }
+      
+      .nav__link:hover::after{
+        width: 100%;
+      }
+  }
+  

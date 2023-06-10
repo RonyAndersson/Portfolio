@@ -47,124 +47,105 @@ body{
 /* ----------- HEADER ----------- */
 
 #header{
+  position: fixed;
   display: flex;
   justify-content: space-between;
-  background-image: var(--bg-header);
+  margin: 0 auto;
+  padding: 2rem;
+  align-items: center;
   width: 100%;
-  height: 6rem;
+  font-family: var(--font-family);
+  background-color: var(--bg-article);
+  border-bottom: 2px solid var(--text-color4);
 }
 
-.logo{
+/* ------------- BARRA DE MENU DESKTOP Y TABLET ------------- */
+.nav{
+  margin-right: 10%;
+}
+
+.nav__logo{
+  color: var(--cor-span2);
+  margin-left: 10%;
+}
+
+.nav-list{
+  display: flex;
+  gap: 2rem;
+}
+
+.nav__item{
   display: flex;
   justify-content: center;
-  height: 6rem;
-  width: 50%;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 1.2rem;
-  color: var(--text-color);
-}
-
-
-.logo h1{
-  display: flex;
   align-items: center;
-  gap: .5rem;
-  text-transform: uppercase;
-  width: 90%;
-  height: 6rem;
+  width: 10rem;
+  height: 3rem;
 }
 
-.logo span{
-  color: var(--cor-span1);
+.nav__link{
+  position: relative;
+  letter-spacing: 1px;
+  font-size: 1.8rem;
+  padding: 0 1rem;
+  color: var(--text-color2);
+}
+
+.nav__link::after{
+  content: "";
+  position: absolute;
+  background-color: var(--cor-span2);
+  height: .3rem;
+  width: 0;
+  left: 0;
+  bottom: -25%;
+  transition: 300ms;
+}
+
+.nav__link:hover::after{
+  width: 100%;
+}
+
+.open__menu,
+.close__menu{
+  display: none;
 }
 
 
 /* ------ MAIN CONTAINER ------ */
 #container {
-    border: 1px solid red;
     max-width: 90%;
     margin-right: auto;
     margin-left: auto;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding: 4rem 4rem;
     box-sizing: border-box;
 }
 
-/* ----------- MENU ----------- */
-.menu{
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 50%;
-}
-
-.menu ul{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  width: 80%;
-  height: 6rem;
-}
-
-.menus{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: .1rem solid var(--text-color);
-  border-radius: .4rem;
-  width: 10rem;
-  height: 3rem;
-  transition: all 200ms;
-  overflow: hidden;
-}
-
-.menus a{
-  color: var(--text-color);
-  font-family: var(--font-family);
-  font-size: 1.5rem;
-}
-
-.menus:hover{
-  background-color: var(--bg-article);
-  transform: scale(1.1, 1.1);
-  box-shadow: -.2rem .2rem .5rem rgba(46,44,46,0.52);
-}
-
-.menus:hover a{
-  color: var(--text-color2);
-}
 
 /* -------- SECTION - HOME -------- */
 
 #home{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
   height: 60rem;
-  gap: 5rem;
-  border: 2px solid white;
-  padding: 2rem;
 }
 
 .home{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3rem;
+  align-items: center;
+  padding: 2rem;
   font-family: var(--font-family);
 }
 
 .home span{
   font-size: 3rem;
   font-weight: 600;
-  color: var(--cor-span1);
+  color: var(--cor-span2);
 }
 
 .home h2{
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 400;
   color: var(--text-color2);
 }
@@ -176,14 +157,17 @@ body{
 }
 
 .illustration img{
+  height: 80%;
   width: 80%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 /* --------- BUTTONS ---------- */
 
 .buttons{
   display: flex;
-  gap: 4rem;
+  gap: 5rem;
   margin-top: 5rem;
 }
 
@@ -191,15 +175,14 @@ body{
   text-align: center;
   line-height: 4rem;
   border: .1rem solid white;
+  border-radius: .2rem;
   color: var(--text-color2);      
   background-color: var(--bg-article);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: .1rem;
-  width: 10rem;
+  width: 12rem;
   height: 4rem;
-  border-radius: .2rem;
-  position: relative;
 }
 
 .btnlinkedin:hover{
@@ -217,3 +200,53 @@ body{
   border: 2px solid white;
   padding: 2rem;
 }
+
+.sobre__mim{
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+
+#sobre h2{
+  font-family: var(--font-family);
+  font-size: 4rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500; 
+  color: var(--text-color2);
+}
+
+.sobre__mim h3{
+  font-family: var(--font-family);
+  font-size: 2rem;
+  color: var(--text-color2);
+}
+
+.sobre__description{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 80%;
+  border: 1px solid white;
+}
+
+#sobre p{
+  margin-top: 1rem;
+  color: var(--text-color4);
+  font-family: var(--font-family);
+  text-align: justify;
+}
+
+.foto{
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  border: 1px solid white;
+}
+
+.foto img{
+  width: 100%;
+}
+
+/* -------- SECTION PROJETOS --------- */
