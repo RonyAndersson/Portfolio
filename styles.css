@@ -47,10 +47,8 @@ body{
 /* ----------- HEADER ----------- */
 
 #header{
-  position: fixed;
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
   padding: 2rem;
   align-items: center;
   width: 100%;
@@ -60,18 +58,13 @@ body{
 }
 
 /* ------------- BARRA DE MENU DESKTOP Y TABLET ------------- */
-.nav{
-  margin-right: 10%;
-}
-
 .nav__logo{
   color: var(--cor-span2);
-  margin-left: 10%;
 }
 
 .nav-list{
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .nav__item{
@@ -138,7 +131,7 @@ body{
   font-family: var(--font-family);
 }
 
-.home span{
+.banner{
   font-size: 3rem;
   font-weight: 600;
   color: var(--cor-span2);
@@ -157,7 +150,7 @@ body{
 }
 
 .illustration img{
-  height: 80%;
+  height: 70%;
   width: 80%;
   object-fit: cover;
   z-index: -1;
@@ -173,16 +166,16 @@ body{
 
 .buttons a{
   text-align: center;
-  line-height: 4rem;
-  border: .1rem solid white;
-  border-radius: .2rem;
+  line-height: 5rem;
+  border: .1rem solid ;
+  border-radius: 1rem;
   color: var(--text-color2);      
   background-color: var(--bg-article);
   font-size: 1.8rem;
   font-weight: 600;
   letter-spacing: .1rem;
-  width: 12rem;
-  height: 4rem;
+  width: 15rem;
+  height: 5rem;
 }
 
 .btnlinkedin:hover{
@@ -203,6 +196,7 @@ body{
 
 .sobre__mim{
   display: flex;
+  /* flex-wrap: wrap; */
   justify-content: space-around;
   gap: 2rem;
 }

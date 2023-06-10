@@ -1,6 +1,6 @@
 /* -------- LOGO ------- */
 
-.logo{
+.nav__logo{
     animation: fadeInLeft 500ms linear; 
   }
   
@@ -14,7 +14,7 @@
 
 /* ------ ANIMATION MENU HOVER ------- */
 
-.menus:hover a{
+/* .menus:hover a{
     animation: slider 300ms linear;
 }
   
@@ -28,7 +28,7 @@
       transform: translateY(0rem);
     }
     
-}
+} */
 
 /* --------- ANIMATION IMAGE --------- */
 
@@ -59,7 +59,7 @@
 
   /* -------- TYPING EFFECT -------- */
 
-  .home span{
+  .banner{
     display: block;
     white-space: nowrap;
     overflow: hidden;
