@@ -12,23 +12,6 @@
       opacity: 1;
       transform: none; } }
 
-/* ------ ANIMATION MENU HOVER ------- */
-
-/* .menus:hover a{
-    animation: slider 300ms linear;
-}
-  
-  @keyframes slider {
-    
-    0%{
-      transform: translateY(-5rem);
-    }
-  
-    100%{
-      transform: translateY(0rem);
-    }
-    
-} */
 
 /* --------- ANIMATION IMAGE --------- */
 
@@ -65,7 +48,7 @@
     overflow: hidden;
     width: 20ch;
     border-right: .4rem solid;
-    animation: typing 3s steps(20), blink .5s infinite step-end alternate;
+    animation: typing 2s steps(20), blink .5s infinite step-end alternate;
   }
   
   @keyframes typing{
